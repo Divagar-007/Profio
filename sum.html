@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comment Section Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    #commentSection {
+      display: none;
+      margin-top: 20px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 80px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      resize: none;
+    }
+
+    button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #commentList {
+      margin-top: 20px;
+    }
+
+    .comment {
+      background: #f1f1f1;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="commentBtn">Comment</button>
+
+  <div id="commentSection">
+    <h3>Leave a Comment</h3>
+    <textarea id="commentInput" placeholder="Type your comment..."></textarea><br>
+    <button id="postBtn">Post Comment</button>
+
+    <div id="commentList"></div>
+  </div>
+
+  <script>
+    const commentBtn = document.getElementById("commentBtn");
+    const commentSection = document.getElementById("commentSection");
+    const postBtn = document.getElementById("postBtn");
+    const commentInput = document.getElementById("commentInput");
+    const commentList = document.getElementById("commentList");
+
+    // 🟢 Show comment section on button click
+    commentBtn.addEventListener("click", () => {
+      commentSection.style.display =
+        commentSection.style.display === "none" ? "block" : "none";
+    });
+
+    // 🟢 Add comment
+    postBtn.addEventListener("click", () => {
+      const text = commentInput.value.trim();
+      if (text !== "") {
+        const comment = document.createElement("div");
+        comment.classList.add("comment");
+        comment.textContent = text;
+        commentList.appendChild(comment);
+        commentInput.value = "";
+      } else {
+        alert("Please enter a comment!");
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -4,34 +4,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login - Profio</title>
-  <link rel="stylesheet" href="./Css/style.css" />
+
+  <!-- ✅ Connect CSS -->
+  <link rel="stylesheet" href="./Css/Loginpage.css" />
 </head>
 <body>
-
   <div class="login-container">
-    <h2>Login in</h2>
-    <form>
+    <h2>Login</h2>
+
+    <form id="loginForm">
       <div class="input-group">
         <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Enter your email" required />
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
       </div>
 
       <div class="input-group">
         <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter your password" required />
+        <input type="password" id="password" name="password" placeholder="Enter your password" required />
       </div>
 
       <div class="forgot">
-        <a href="#">Forgot password?</a>
+        <a href="./html/Forgot_password.html">Forgot password?</a>
       </div>
 
       <button type="submit" class="login-btn">Login</button>
 
       <div class="signup">
-        Not a member? <a href="#">Join now</a>
+        Not a member? <a href="./html/sign_up.html">Join now</a>
       </div>
     </form>
   </div>
+
+  <div class="bg"></div>
+
+  <!-- ✅ Connect JS -->
+  <script src="../Javascript/script.js"></script>
 
 </body>
 </html>

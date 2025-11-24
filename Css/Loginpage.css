@@ -1,0 +1,269 @@
+/* ====== Global Styles ====== */
+/* Global */
+/* ✅ Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ✅ Body background */
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../assets/);
+  position: relative;
+  content: fill;
+}
+
+/* ✅ Background overlay (optional for effect) */
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+  background: url('https://www.transparenttextures.com/patterns/symphony.png');
+  z-index: 0;
+}
+
+/* ✅ Login box */
+.login-container {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  padding: 40px 35px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-container:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 7px 15px rgb(8, 45, 179);
+}
+
+/* ✅ Title */
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* ✅ Input groups */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #2575fc;
+  box-shadow: 0 0 5px rgba(37, 117, 252, 0.3);
+}
+
+/* ✅ Forgot password */
+.forgot {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.forgot a {
+  text-decoration: none;
+  color: #2575fc;
+  font-size: 14px;
+}
+
+.forgot a:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Login button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s;
+}
+
+.login-btn:hover {
+  background: linear-gradient(90deg, #2575fc, #6a11cb);
+  transform: translateY(-2px);
+}
+
+/* ✅ Signup section */
+.signup {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+}
+
+.signup a {
+  color: #2575fc;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Responsive design */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 30px 25px;
+    width: 90%;
+  }
+}
+
+/* ====== Navbar ====== */
+.navbar {
+  width: 100%;
+  background: linear-gradient(90deg, #0073b1, #00bfae);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  margin-left: 25px;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f39c12;
+}
+
+.login-btn {
+  background-color: #9b59b6;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #8e44ad;
+}
+
+/* ====== Forgot Password Container ====== */
+.forgot-container {
+  margin-top: 80px;
+  background-color: #f5f7fa;
+  padding: 40px;
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.forgot-container h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.forgot-container p {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+/* ====== Input Group ====== */
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #2c3e50;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #0073b1;
+  outline: none;
+}
+
+/* ====== Button ====== */
+.btn {
+  background-color: #9b59b6;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #8e44ad;
+}
+
+/* ====== Back to Login ====== */
+.back-login {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.back-login a {
+  color: #0073b1;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back-login a:hover {
+  text-decoration: underline;
+}
+
+

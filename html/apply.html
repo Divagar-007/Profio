@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply - Profio</title>
+
+  <link rel="stylesheet" href="../Css/apply.css" />
+  <script src="../Javascript/script.js"></script>
+</head>
+<body>
+
+  <div class="apply-container">
+    <h2>Apply for this Job</h2>
+
+    <form id="applyForm">
+      <label>Full Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required />
+
+      <label>Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+
+      <label>Experience (Years)</label>
+      <input type="number" id="experience" placeholder="0" required />
+
+      <label>Upload Resume (PDF)</label>
+      <input type="file" id="resume" accept=".pdf" required />
+
+      <button type="submit" class="btn">Apply Now</button>
+    </form>
+  </div>
+
+  <script src="apply.js"></script>
+
+</body>
+</html>
